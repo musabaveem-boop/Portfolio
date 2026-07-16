@@ -1,0 +1,785 @@
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Poppins', sans-serif;
+       }
+
+       body {
+           background: #0b1120;
+           color: #fff;
+       }
+
+       header {
+
+           width: 100%;
+           height: 90px;
+
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+
+           padding: 0 60px;
+
+       }
+
+
+       .logo {
+
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
+
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
+
+       nav ul {
+
+           display: flex;
+           list-style: none;
+           gap: 35px;
+
+       }
+
+       nav ul li a {
+
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
+
+       }
+
+       nav ul li a:hover {
+
+           color: #7c6cff;
+
+       }
+
+       nav ul li a::after {
+
+           content: "";
+           position: absolute;
+
+           left: 0;
+           bottom: -8px;
+
+           width: 0;
+           height: 2px;
+
+           background: #7c6cff;
+
+           transition: .3s;
+
+       }
+
+       nav ul li a:hover::after {
+
+           width: 100%;
+
+       }
+
+       .active {
+
+           color: #7c6cff;
+
+       }
+
+       .active::after {
+
+           width: 100%;
+
+       }
+
+       .hire-btn {
+
+           text-decoration: none;
+
+           background: #7c6cff;
+
+           color: white;
+
+           padding: 15px 35px;
+
+           border-radius: 12px;
+
+           transition: .3s;
+
+       }
+
+       .hire-btn:hover {
+
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
+
+
+       /*this is new  style*/
+
+       /* ==========================
+        CONTACT SECTION
+========================== */
+
+       .contact {
+           width: 100%;
+           min-height: 100vh;
+           padding: 100px 10%;
+           background: #0f172a;
+           position: relative;
+           overflow: hidden;
+       }
+
+       .contact-wrapper {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           gap: 80px;
+           position: relative;
+           z-index: 2;
+       }
+
+
+       .contact::before {
+
+           content: "";
+
+           position: absolute;
+
+           width: 400px;
+           height: 400px;
+
+           background: #38bdf8;
+
+           border-radius: 50%;
+
+           filter: blur(120px);
+
+           top: -100px;
+           left: -100px;
+
+           opacity: .25;
+
+           animation: moveGlow 8s infinite alternate;
+
+       }
+
+
+
+       .contact::after {
+
+           content: "";
+
+           position: absolute;
+
+           width: 350px;
+           height: 350px;
+
+           background: #7c6cff;
+
+           border-radius: 50%;
+
+           filter: blur(120px);
+
+           bottom: -100px;
+           right: -100px;
+
+           opacity: .25;
+
+           animation: moveGlow 10s infinite alternate;
+
+       }
+
+
+
+       @keyframes moveGlow {
+
+           from {
+               transform: translate(0, 0);
+           }
+
+
+           to {
+               transform: translate(80px, 50px);
+           }
+
+       }
+
+       /* ==========================
+        LEFT SIDE
+========================== */
+
+       .contact-left {
+           width: 50%;
+       }
+
+       .contact-tag {
+           display: inline-block;
+           padding: 8px 22px;
+           background: rgba(56, 189, 248, .15);
+           color: #38bdf8;
+           border: 1px solid #38bdf8;
+           border-radius: 30px;
+           margin-bottom: 20px;
+           font-size: 14px;
+           letter-spacing: 1px;
+       }
+
+       .contact-left h2 {
+           font-size: 55px;
+           line-height: 1.2;
+           color: #fff;
+           margin-bottom: 25px;
+       }
+
+       .contact-left h2 span {
+           color: #38bdf8;
+       }
+
+       .contact-left p {
+           color: #94a3b8;
+           line-height: 1.8;
+           font-size: 17px;
+           margin-bottom: 40px;
+       }
+
+
+       /* ==========================
+        SERVICE CARDS
+========================== */
+
+       /* =========================
+      3D GLOW SERVICE CARDS
+========================= */
+
+       .services {
+           display: flex;
+           flex-direction: column;
+           gap: 25px;
+       }
+
+       .service-card {
+
+           position: relative;
+
+           display: flex;
+           align-items: center;
+           gap: 20px;
+
+           padding: 25px;
+
+           background: rgba(255, 255, 255, .05);
+
+           backdrop-filter: blur(20px);
+
+           border: 1px solid rgba(255, 255, 255, .08);
+
+           border-radius: 20px;
+
+           overflow: hidden;
+
+           cursor: pointer;
+
+           transition: .5s ease;
+
+       }
+
+
+       /* Glow Effect */
+
+       .service-card::before {
+
+           content: "";
+
+           position: absolute;
+
+           width: 250px;
+           height: 250px;
+
+           background: radial-gradient(#38bdf8, transparent 70%);
+
+           top: -130px;
+           left: -130px;
+
+           opacity: 0;
+
+           transition: .5s;
+
+       }
+
+
+       .service-card:hover::before {
+
+           opacity: .35;
+
+       }
+
+
+       /* Hover */
+
+       .service-card:hover {
+
+           transform:
+               perspective(1000px) rotateX(6deg) rotateY(-6deg) translateY(-10px);
+
+           border-color: #38bdf8;
+
+           box-shadow:
+               0 20px 40px rgba(0, 0, 0, .35),
+               0 0 35px rgba(56, 189, 248, .35);
+
+       }
+
+
+
+       /* Icon */
+
+       .service-icon {
+
+           min-width: 70px;
+           height: 70px;
+
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           border-radius: 18px;
+
+           background: linear-gradient(135deg, #38bdf8, #2563eb);
+
+           color: white;
+
+           font-size: 28px;
+
+           transition: .6s;
+
+           box-shadow: 0 0 20px rgba(56, 189, 248, .4);
+
+       }
+
+
+       .service-card:hover .service-icon {
+
+           transform:
+               rotate(360deg) scale(1.15);
+
+           box-shadow: 0 0 35px #38bdf8;
+
+       }
+
+
+
+       /* Text */
+
+       .service-content h3 {
+
+           color: white;
+
+           font-size: 22px;
+
+           margin-bottom: 8px;
+
+       }
+
+
+       .service-content p {
+
+           color: #94a3b8;
+
+           line-height: 1.7;
+
+           font-size: 15px;
+
+       }
+
+
+       /* Shine Animation */
+
+       .service-card::after {
+
+           content: "";
+
+           position: absolute;
+
+           top: 0;
+           left: -120%;
+
+           width: 60%;
+           height: 100%;
+
+           background: linear-gradient(90deg,
+                   transparent,
+                   rgba(255, 255, 255, .35),
+                   transparent);
+
+           transform: skewX(-25deg);
+
+       }
+
+
+       .service-card:hover::after {
+
+           left: 150%;
+
+           transition: .8s;
+
+       }
+
+
+       /* ==========================
+      CONTACT INFO
+========================== */
+
+       .contact-info-box {
+
+           display: flex;
+           gap: 40px;
+
+           margin-top: 45px;
+
+       }
+
+       .contact-info {
+           margin-top: 100px;
+       }
+
+       .contact-info-box h4 {
+
+           color: #38bdf8;
+           margin-bottom: 8px;
+
+       }
+
+       .contact-info-box p {
+
+           color: #fff;
+
+       }
+
+
+
+       /* ==========================
+        RIGHT SIDE
+========================== */
+
+       .contact-right {
+
+           width: 45%;
+
+           padding: 45px;
+
+           border-radius: 25px;
+
+           background: rgba(255, 255, 255, .05);
+
+           backdrop-filter: blur(20px);
+
+           border: 1px solid rgba(255, 255, 255, .08);
+
+           box-shadow: 0 20px 50px rgba(0, 0, 0, .4);
+
+       }
+
+       .contact-right h3 {
+
+           color: #fff;
+           font-size: 30px;
+
+           margin-bottom: 35px;
+
+       }
+
+       .contact-right form {
+
+           display: flex;
+           flex-direction: column;
+
+       }
+
+       .contact-right label {
+
+           color: #fff;
+
+           margin-bottom: 10px;
+
+           font-weight: 600;
+
+       }
+
+       .contact-right input,
+       .contact-right textarea {
+
+           padding: 16px 18px;
+
+           margin-bottom: 22px;
+
+           border: none;
+
+           outline: none;
+
+           border-radius: 12px;
+
+           background: #1e293b;
+
+           color: #fff;
+
+           font-size: 15px;
+
+           transition: .3s;
+
+       }
+
+       .contact-right input:focus,
+       .contact-right textarea:focus {
+
+           border: 1px solid #38bdf8;
+
+           box-shadow: 0 0 20px rgba(56, 189, 248, .25);
+
+       }
+
+       .contact-right textarea {
+
+           height: 170px;
+
+           resize: none;
+
+       }
+
+       .contact-right button {
+
+           padding: 17px;
+
+           border: none;
+
+           border-radius: 50px;
+
+           background: #38bdf8;
+
+           color: #0f172a;
+
+           font-size: 18px;
+
+           font-weight: bold;
+
+           cursor: pointer;
+
+           transition: .4s;
+
+       }
+
+       .contact-right button:hover {
+
+           transform: translateY(-6px);
+
+           box-shadow: 0 20px 35px rgba(56, 189, 248, .35);
+
+       }
+
+
+
+       .right {
+
+           padding: 10px;
+           gap: 30px;
+       }
+
+
+       a {
+           text-decoration: none;
+           color: white;
+       }
+
+
+
+
+       /* ==========================
+   SCROLL REVEAL ANIMATION
+========================== */
+
+
+       .reveal {
+
+           opacity: 0;
+
+           transform: translateY(80px);
+
+           transition: 1s ease;
+
+       }
+
+
+       .reveal.active {
+
+           opacity: 1;
+
+           transform: translateY(0);
+
+       }
+
+
+
+
+       /* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+       @media(max-width: 900px) {
+
+           header {
+               padding: 0 25px;
+           }
+
+
+           nav ul {
+               gap: 15px;
+           }
+
+
+           .hire-btn {
+               padding: 12px 20px;
+           }
+
+
+           .contact {
+               padding: 70px 5%;
+           }
+
+
+           .contact-wrapper {
+
+               flex-direction: column;
+
+               gap: 50px;
+
+           }
+
+
+           .contact-left,
+           .contact-right {
+
+               width: 100%;
+
+           }
+
+
+           .contact-left h2 {
+
+               font-size: 40px;
+
+           }
+
+
+           .service-card {
+
+               padding: 20px;
+
+           }
+
+
+           .contact-right {
+
+               padding: 30px;
+
+           }
+
+       }
+
+
+
+       @media(max-width:600px) {
+
+
+           header {
+
+               height: auto;
+
+               flex-direction: column;
+
+               gap: 25px;
+
+               padding: 25px;
+
+           }
+
+
+           .logo {
+
+               font-size: 28px;
+
+           }
+
+
+           nav ul {
+
+               flex-wrap: wrap;
+
+               justify-content: center;
+
+           }
+
+
+           .hire-btn {
+
+               width: 100%;
+
+               text-align: center;
+
+           }
+
+
+           .contact-left h2 {
+
+               font-size: 32px;
+
+           }
+
+
+           .contact-left p {
+
+               font-size: 15px;
+
+           }
+
+
+           .service-card {
+
+               flex-direction: column;
+
+               text-align: center;
+
+           }
+
+
+           .service-icon {
+
+               margin: auto;
+
+           }
+
+
+           .contact-right {
+
+               padding: 25px 20px;
+
+           }
+
+
+           .contact-right h3 {
+
+               font-size: 25px;
+
+           }
+
+
+       }

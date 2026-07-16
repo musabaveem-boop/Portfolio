@@ -1,0 +1,1108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b1120;
+    color: #fff;
+}
+
+header {
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 60px;
+
+}
+
+
+.logo {
+
+    font-size: 34px;
+    font-weight: 800;
+    color: #7c6cff;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    transform: scale(100px);
+    transform: 2px;
+    box-shadow: 0px 0px 5px 0px;
+    background-color: transparent;
+}
+
+nav ul {
+
+    display: flex;
+    list-style: none;
+    gap: 35px;
+
+}
+
+nav ul li a {
+
+    text-decoration: none;
+    color: #b6b6c4;
+    font-size: 17px;
+    transition: .3s;
+    position: relative;
+
+}
+
+nav ul li a:hover {
+
+    color: #7c6cff;
+
+}
+
+nav ul li a::after {
+
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #7c6cff;
+
+    transition: .3s;
+
+}
+
+nav ul li a:hover::after {
+
+    width: 100%;
+
+}
+
+.active {
+
+    color: #7c6cff;
+
+}
+
+.active::after {
+
+    width: 100%;
+
+}
+
+.hire-btn {
+
+    text-decoration: none;
+
+    background: #7c6cff;
+
+    color: white;
+
+    padding: 15px 35px;
+
+    border-radius: 12px;
+
+    transition: .3s;
+
+}
+
+.hire-btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 20px #7c6cff;
+
+}
+
+
+
+
+
+/* cards are starting */
+
+
+
+/* =========================
+   Cards Section
+========================= */
+
+.cards-section {
+    width: 100%;
+    padding: 80px 8%;
+}
+
+.cards-container {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+}
+
+/* =========================
+   Card
+========================= */
+
+.card {
+
+    background: #161616;
+    border-radius: 22px;
+    overflow: hidden;
+
+    transition: .4s;
+    cursor: pointer;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+/* =========================
+   Image
+========================= */
+
+.image-box {
+
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+
+}
+
+.image-box img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: .5s;
+
+}
+
+/* =========================
+   Content
+========================= */
+
+.content {
+
+    padding: 28px;
+
+}
+
+.tag {
+
+    display: inline-block;
+
+    background: #ff1744;
+    color: #fff;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+
+}
+
+.content h2 {
+
+    color: #fff;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+}
+
+.content p {
+
+    color: #bfbfbf;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+}
+
+.btn {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    background: #ff1744;
+
+    padding: 12px 28px;
+
+    border-radius: 40px;
+
+    transition: .4s;
+
+}
+
+/* =========================
+   Hover
+========================= */
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.btn:hover {
+
+    background: #ff355d;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:900px) {
+
+    .cards-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/*=========================
+      Cards Section
+=========================*/
+
+.cards-section {
+    width: 100%;
+    padding: 80px 8%;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/*=========================
+        Card
+=========================*/
+
+.card {
+    position: relative;
+    background: #161616;
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    z-index: 1;
+}
+
+/* Animated Border */
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220%;
+    background: linear-gradient(#ff004c,
+            #00ff99,
+            #00bfff,
+            #ff004c);
+
+    left: 50%;
+    top: -60%;
+    transform: translateX(-50%);
+    animation: rotateBorder 5s linear infinite;
+}
+
+/* Inner Background */
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background-color: #131e38;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+/*=========================
+        Image
+=========================*/
+
+.image-box {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: .5s;
+}
+
+/*=========================
+        Content
+=========================*/
+
+.content {
+    position: relative;
+    z-index: 2;
+
+    padding: 28px;
+}
+
+.tag {
+    display: inline-block;
+
+    background: #7c6cff;
+    color: #fff;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.content h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    color: #bfbfbf;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #7c6cff;
+    box-shadow: 0px 0px 5px 0px;
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    transition: .4s;
+}
+
+.btn:hover {
+    background-color: #0b1120;
+    box-shadow: 0px 0px 20px 0px;
+}
+
+/*=========================
+        Hover
+=========================*/
+
+.card:hover {
+    transform: translateY(-12px);
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/*=========================
+      Animation
+=========================*/
+
+@keyframes rotateBorder {
+
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+
+}
+
+/*=========================
+      Responsive
+=========================*/
+
+@media(max-width:900px) {
+
+    .cards-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+
+/* hello new con */
+
+
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#container {
+    margin: 60px 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#heading {
+    color: #8f83ed;
+}
+
+#paras {
+    width: 400px;
+}
+
+.photo img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px;
+}
+
+.photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#paras {
+    animation: slideLeft 1s ease forwards;
+}
+
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+#paras {
+    animation: slideLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+
+
+.photo {
+    animation: slideRight 1s ease forwards;
+}
+
+
+@keyframes slideRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+#extra {
+    color: #7c6cff;
+    font-size: 18px;
+}
+
+
+
+
+
+.skill-progress {
+    width: min(90%, 1000px);
+    margin: 120px auto;
+}
+
+.progress-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.progress-heading h2 {
+    color: #fff;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.progress-heading p {
+    color: #bdbdbd;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+.skill {
+    margin-bottom: 35px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.bar {
+    width: 100%;
+    height: 14px;
+    background: #222;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.fill {
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    transition: 2s;
+}
+
+/* Colors */
+
+.html {
+    background: #ff5722;
+}
+
+.css {
+    background: #2196f3;
+}
+
+.js {
+    background: #ffd600;
+}
+
+.seo {
+    background: #00c853;
+}
+
+
+
+
+
+
+/* ============================
+        TOOLS SECTION
+=============================== */
+
+.tools-section {
+    width: 90%;
+    margin: 140px auto;
+}
+
+/* ============================
+        HEADING
+=============================== */
+
+.tools-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.sub-title {
+    display: inline-block;
+    color: #00e5ff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.tools-heading h2 {
+    font-size: 55px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.tools-heading p {
+    color: #bdbdbd;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 70px;
+}
+
+
+/* ============================
+        GRID
+=============================== */
+
+.tools-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 35px;
+
+}
+
+
+/* ============================
+        CARD
+=============================== */
+
+.tool-card {
+
+    background: rgba(255, 255, 255, .05);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 22px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    transition: .45s;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+}
+
+
+/* Top Light Effect */
+
+.tool-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120%;
+
+    left: -40%;
+
+    width: 180px;
+
+    height: 400px;
+
+    background: rgba(255, 255, 255, .08);
+
+    transform: rotate(30deg);
+
+    transition: .8s;
+
+}
+
+
+.tool-card:hover::before {
+
+    top: 150%;
+
+}
+
+
+/* Hover */
+
+.tool-card:hover {
+
+    transform: translateY(-12px);
+
+    border-color: #00e5ff;
+
+    box-shadow: 0 15px 40px rgba(0, 229, 255, .18);
+
+}
+
+
+/* ============================
+        IMAGE
+=============================== */
+
+.tool-image {
+
+    width: 95px;
+
+    height: 95px;
+
+    margin: auto;
+
+    margin-bottom: 28px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .06);
+
+    transition: .5s;
+
+}
+
+
+.tool-image img {
+
+    width: 60px;
+
+    transition: .5s;
+
+}
+
+
+.tool-card:hover .tool-image {
+
+    transform: rotate(12deg) scale(1.08);
+
+    background: rgba(0, 229, 255, .15);
+
+}
+
+
+.tool-card:hover img {
+
+    transform: scale(1.15);
+
+}
+
+
+/* ============================
+        TEXT
+=============================== */
+
+.tool-card h3 {
+
+    color: white;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.tool-card p {
+
+    color: #bdbdbd;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+}
+
+
+/* ============================
+      RESPONSIVE
+=============================== */
+
+@media(max-width:768px) {
+
+    .tools-heading h2 {
+
+        font-size: 40px;
+
+    }
+
+    .tools-heading p {
+
+        font-size: 15px;
+
+    }
+
+    .tool-card {
+
+        padding: 30px 20px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*====================================
+        PREMIUM GRADIENT BORDER
+=====================================*/
+
+.tool-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    padding: 1.5px;
+    background: linear-gradient(45deg,
+            #00e5ff,
+            transparent,
+            #8a2be2,
+            transparent,
+            #00e5ff);
+    background-size: 300% 300%;
+    animation: borderMove 6s linear infinite;
+
+    -webkit:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+
+    opacity: 0;
+    transition: .5s;
+}
+
+.tool-card:hover::after {
+    opacity: 1;
+}
+
+/*====================================
+          BORDER ANIMATION
+=====================================*/
+
+@keyframes borderMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/*====================================
+         ICON FLOATING
+=====================================*/
+
+.tool-image {
+
+    animation: floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/*====================================
+      PREMIUM HOVER GLOW
+=====================================*/
+
+.tool-card:hover {
+
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, .25),
+        0 0 40px rgba(0, 229, 255, .18),
+        0 0 80px rgba(138, 43, 226, .15);
+
+}
+
+
+/*====================================
+        IMAGE SHINE
+=====================================*/
+
+.tool-image {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.tool-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 40px;
+
+    height: 180%;
+
+    background: rgba(255, 255, 255, .35);
+
+    left: -70px;
+
+    transform: rotate(25deg);
+
+    transition: .8s;
+
+}
+
+.tool-card:hover .tool-image::before {
+
+    left: 130px;
+
+}
+
+
+/*====================================
+      HEADING HOVER
+=====================================*/
+
+.tool-card h3 {
+
+    transition: .4s;
+
+}
+
+.tool-card:hover h3 {
+
+    color: #00e5ff;
+
+    letter-spacing: 1px;
+
+}
+
+
+/*====================================
+      PARAGRAPH
+=====================================*/
+
+.tool-card p {
+
+    transition: .4s;
+
+}
+
+.tool-card:hover p {
+
+    color: #f1f1f1;
+
+}
+
+
+/*====================================
+      CARD SCALE
+=====================================*/
+
+.tools-container:hover .tool-card {
+
+    opacity: .55;
+
+    transform: scale(.96);
+
+}
+
+.tools-container .tool-card:hover {
+
+    opacity: 1;
+
+    transform: scale(1.05) translateY(-15px);
+
+    z-index: 100;
+
+}
+
+
+
+@media(max-width:900px) {
+
+    #container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+        margin: 60px 25px;
+    }
+
+    #paras {
+        width: 100%;
+    }
+
+    .photo img {
+        margin: auto;
+    }
+
+    #heading {
+        text-align: center;
+    }
+
+}
