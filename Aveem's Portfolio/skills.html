@@ -9,33 +9,40 @@
 </head>
 
 <body>
-    <header>
+   <header>
 
-        <div class="logo">
-            Aveem's Portfolio
-        </div>
+    <div class="logo">
+        Aveem's Portfolio
+    </div>
 
-        <nav>
+    <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-            <ul>
+    <nav class="nav-menu">
 
-                <li><a href="index.html" class="">Home</a></li>
+        <ul>
 
-                <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
 
-                <li><a href="skills.html"><span class="active">Skills</span></a></li>
+            <li><a href="about.html">About</a></li>
 
-                <li><a href="contact.html">Contact</a></li>
+            <li><a href="skills.html"><span class="active">Skills</span></a></li>
 
-            </ul>
+            <li><a href="contact.html">Contact</a></li>
 
-        </nav>
+        </ul>
 
-        <a href="contact.html" class="hire-btn">
-            Contact Me
-        </a>
+    </nav>
 
-    </header>
+
+    <a href="contact.html" class="hire-btn">
+        Contact Me
+    </a>
+
+</header>
 
     <div id="container">
         <div>
@@ -447,6 +454,17 @@
             }
 
         });
+
+
+
+
+
+        const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector(".nav-menu");
+
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
 
     </script>
 

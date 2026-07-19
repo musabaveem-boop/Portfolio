@@ -1106,3 +1106,70 @@ nav ul li a:hover::after {
     }
 
 }
+
+
+
+/* ==========================
+      RESPONSIVE NAVBAR
+========================== */
+
+.menu-btn{
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.menu-btn span{
+    width:28px;
+    height:3px;
+    background:#fff;
+    border-radius:10px;
+    transition:.4s;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    header{
+        padding:20px 25px;
+        height:auto;
+        position:relative;
+    }
+
+    .menu-btn{
+        display:flex;
+    }
+
+    .hire-btn{
+        display:none;
+    }
+
+    .nav-menu{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#111827;
+        display:none;
+        padding:25px 0;
+        box-shadow:0 15px 30px rgba(0,0,0,.4);
+    }
+
+    .nav-menu.active{
+        display:block;
+    }
+
+    .nav-menu ul{
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+
+    .logo{
+        font-size:26px;
+    }
+
+}
