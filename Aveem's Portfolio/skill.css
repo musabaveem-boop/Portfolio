@@ -10,8 +10,7 @@ body {
     color: #fff;
 }
 
-header {
-
+  header{
     width: 100%;
     height: 90px;
 
@@ -21,109 +20,123 @@ header {
 
     padding: 0 60px;
 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(11, 17, 32, 0.92);
+    backdrop-filter: blur(12px);
+
+    transition: .35s ease;
 }
 
 
-.logo {
-
-    font-size: 34px;
-    font-weight: 800;
-    color: #7c6cff;
-    cursor: pointer;
-    background-color: transparent;
-    transition: 0.5s;
+header.scrolled{
+    height: 75px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    background: rgba(11,17,32,.97);
 }
 
-.logo:hover {
-    transform: scale(100px);
-    transform: 2px;
-    box-shadow: 0px 0px 5px 0px;
-    background-color: transparent;
-}
 
-nav ul {
+       .logo {
 
-    display: flex;
-    list-style: none;
-    gap: 35px;
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
 
-}
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
 
-nav ul li a {
+       nav ul {
 
-    text-decoration: none;
-    color: #b6b6c4;
-    font-size: 17px;
-    transition: .3s;
-    position: relative;
+           display: flex;
+           list-style: none;
+           gap: 35px;
 
-}
+       }
 
-nav ul li a:hover {
+       nav ul li a {
 
-    color: #7c6cff;
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
 
-}
+       }
 
-nav ul li a::after {
+       nav ul li a:hover {
 
-    content: "";
-    position: absolute;
+           color: #7c6cff;
 
-    left: 0;
-    bottom: -8px;
+       }
 
-    width: 0;
-    height: 2px;
+       nav ul li a::after {
 
-    background: #7c6cff;
+           content: "";
+           position: absolute;
 
-    transition: .3s;
+           left: 0;
+           bottom: -8px;
 
-}
+           width: 0;
+           height: 2px;
 
-nav ul li a:hover::after {
+           background: #7c6cff;
 
-    width: 100%;
+           transition: .3s;
 
-}
+       }
 
-.active {
+       nav ul li a:hover::after {
 
-    color: #7c6cff;
+           width: 100%;
 
-}
+       }
 
-.active::after {
+       .active {
 
-    width: 100%;
+           color: #7c6cff;
 
-}
+       }
 
-.hire-btn {
+       .active::after {
 
-    text-decoration: none;
+           width: 100%;
 
-    background: #7c6cff;
+       }
 
-    color: white;
+       .hire-btn {
 
-    padding: 15px 35px;
+           text-decoration: none;
 
-    border-radius: 12px;
+           background: #7c6cff;
 
-    transition: .3s;
+           color: white;
 
-}
+           padding: 15px 35px;
 
-.hire-btn:hover {
+           border-radius: 12px;
 
-    transform: translateY(-5px);
+           transition: .3s;
 
-    box-shadow: 0 0 20px #7c6cff;
+       }
 
-}
+       .hire-btn:hover {
 
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
 
 
 
@@ -1131,45 +1144,159 @@ nav ul li a:hover::after {
 
 /* Mobile */
 
-@media(max-width:900px){
 
-    header{
-        padding:20px 25px;
-        height:auto;
-        position:relative;
-    }
 
-    .menu-btn{
-        display:flex;
-    }
 
-    .hire-btn{
-        display:none;
-    }
+     /* ==========================
+   RESPONSIVE DESIGN
+========================== */
 
-    .nav-menu{
-        position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:#111827;
-        display:none;
-        padding:25px 0;
-        box-shadow:0 15px 30px rgba(0,0,0,.4);
-    }
+       @media(max-width: 900px) {
 
-    .nav-menu.active{
-        display:block;
-    }
+           header {
+               padding: 0 25px;
+           }
 
-    .nav-menu ul{
-        flex-direction:column;
-        align-items:center;
-        gap:25px;
-    }
 
-    .logo{
-        font-size:26px;
-    }
+           nav ul {
+               gap: 15px;
+           }
 
-}
+
+           .hire-btn {
+               padding: 12px 20px;
+           }
+
+
+           .contact {
+               padding: 70px 5%;
+           }
+
+
+           .contact-wrapper {
+
+               flex-direction: column;
+
+               gap: 50px;
+
+           }
+
+
+           .contact-left,
+           .contact-right {
+
+               width: 100%;
+
+           }
+
+
+           .contact-left h2 {
+
+               font-size: 40px;
+
+           }
+
+
+           .service-card {
+
+               padding: 20px;
+
+           }
+
+
+           .contact-right {
+
+               padding: 30px;
+
+           }
+
+       }
+
+
+
+       @media(max-width:600px) {
+
+
+           header {
+
+               height: auto;
+
+               flex-direction: column;
+
+               gap: 25px;
+
+               padding: 25px;
+
+           }
+
+
+           .logo {
+
+               font-size: 28px;
+
+           }
+
+
+           nav ul {
+
+               flex-wrap: wrap;
+
+               justify-content: center;
+
+           }
+
+
+           .hire-btn {
+
+               width: 100%;
+                
+               text-align: center;
+
+           }
+
+
+           .contact-left h2 {
+
+               font-size: 32px;
+
+           }
+
+
+           .contact-left p {
+
+               font-size: 15px;
+
+           }
+
+
+           .service-card {
+
+               flex-direction: column;
+
+               text-align: center;
+
+           }
+
+
+           .service-icon {
+
+               margin: auto;
+
+           }
+
+
+           .contact-right {
+
+               padding: 25px 20px;
+
+           }
+
+
+           .contact-right h3 {
+
+               font-size: 25px;
+
+           }
+
+
+       }

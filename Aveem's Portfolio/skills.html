@@ -9,40 +9,34 @@
 </head>
 
 <body>
-   <header>
+  <header>
+        
 
-    <div class="logo">
-        Aveem's Portfolio
-    </div>
+        <div class="logo">
+           Aveem's Portfolio
+        </div>
 
-    <div class="menu-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+        <nav>
 
-    <nav class="nav-menu">
+            <ul>
 
-        <ul>
+                <li><a href="index.html" class="">Home</a></li>
 
-            <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
 
-            <li><a href="about.html">About</a></li>
+                <li><a href="skills.html"><span class="active">Skills</span></a></li>
 
-            <li><a href="skills.html"><span class="active">Skills</span></a></li>
+                <li><a href="contact.html">Contact</a></li>
 
-            <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-        </ul>
+        </nav>
+        
+        <a href="contact.html" class="hire-btn">
+            Contact Me
+        </a>
 
-    </nav>
-
-
-    <a href="contact.html" class="hire-btn">
-        Contact Me
-    </a>
-
-</header>
+    </header>
 
     <div id="container">
         <div>
@@ -459,11 +453,27 @@
 
 
 
+
+
+
         const menuBtn = document.querySelector(".menu-btn");
 const navMenu = document.querySelector(".nav-menu");
 
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("active");
+});
+
+
+
+
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
 });
 
     </script>
