@@ -1,0 +1,602 @@
+/* =========================
+        RESET
+========================= */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+}
+
+
+
+:root{
+
+    --primary:#7c6cff;
+    --bg:#080812;
+    --card:#12121f;
+    --text:#ffffff;
+    --gray:#a1a1aa;
+
+}
+
+
+
+body{
+
+    background-color: var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* BACKGROUND EFFECT */
+
+
+body::before{
+
+    content:"";
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    background:var(--primary);
+
+    filter:blur(170px);
+
+    opacity:.18;
+
+    top:100px;
+    left:-150px;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#a855f7;
+
+    filter:blur(170px);
+
+    opacity:.15;
+
+    right:-120px;
+    bottom:80px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* =========================
+        NAVBAR
+========================= */
+
+   header {
+
+           width: 100%;
+           height: 90px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(11,17,32,.92);
+            transition: .3s;
+
+       }
+
+
+       .logo {
+
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
+
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
+
+       nav ul {
+
+           display: flex;
+           list-style: none;
+           gap: 35px;
+
+       }
+
+       nav ul li a {
+
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
+
+       }
+
+       nav ul li a:hover {
+
+           color: #7c6cff;
+
+       }
+
+       nav ul li a::after {
+
+           content: "";
+           position: absolute;
+
+           left: 0;
+           bottom: -8px;
+
+           width: 0;
+           height: 2px;
+
+           background: #7c6cff;
+
+           transition: .3s;
+
+       }
+
+       nav ul li a:hover::after {
+
+           width: 100%;
+
+       }
+
+       .active {
+
+           color: #7c6cff;
+
+       }
+
+       .active::after {
+
+           width: 100%;
+
+       }
+
+       .hire-btn {
+
+           text-decoration: none;
+
+           background: #7c6cff;
+
+           color: white;
+
+           padding: 15px 35px;
+
+           border-radius: 12px;
+
+           transition: .3s;
+
+       }
+
+       .hire-btn:hover {
+
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
+
+
+
+
+
+
+
+
+
+       /* ========================================== */
+
+
+       /* =========================================================
+   TIMELESS HOME STYLING ARTICLE
+   Premium Editorial Blog Style
+========================================================= */
+
+
+/* =========================================================
+   ARTICLE BASE
+========================================================= */
+
+#timeless-home-styling-article {
+    width: min(100%, 920px);
+    margin: 0 auto;
+    padding: 70px 28px 90px;
+    color: #29241f;
+    background: #f8f5ef;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ARTICLE INTRO
+========================================================= */
+
+#timeless-home-styling-intro {
+    max-width: 780px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+#timeless-home-styling-intro .article-title {
+    margin: 0 0 18px;
+    color: #241f1a;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+#timeless-home-styling-intro .article-subtitle {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    color: #8a6f55;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    font-style: italic;
+    line-height: 1.7;
+}
+
+#timeless-home-styling-intro .intro-text {
+    max-width: 720px;
+    margin: 0 auto 16px;
+    color: #625b53;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   STYLING IDEA SECTIONS
+========================================================= */
+
+#timeless-home-styling-article .styling-idea {
+    position: relative;
+    margin-bottom: 28px;
+    padding: 38px 42px;
+    background: #fffdf9;
+    border: 1px solid rgba(138, 111, 85, 0.15);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(54, 40, 27, 0.045);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+#timeless-home-styling-article .styling-idea:hover {
+    transform: translateY(-4px);
+    border-color: rgba(138, 111, 85, 0.28);
+    box-shadow: 0 18px 45px rgba(54, 40, 27, 0.08);
+}
+
+
+/* =========================================================
+   IDEA TITLES
+========================================================= */
+
+#timeless-home-styling-article .idea-title {
+    position: relative;
+    margin: 0 0 20px;
+    padding-left: 22px;
+    color: #2d261f;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+#timeless-home-styling-article .idea-title::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 4px;
+    height: calc(100% - 10px);
+    background: #a88663;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   IDEA TEXT
+========================================================= */
+
+#timeless-home-styling-article .idea-text {
+    margin: 0 0 15px;
+    color: #625b53;
+    font-size: 0.98rem;
+    line-height: 1.9;
+}
+
+#timeless-home-styling-article .idea-text:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FINAL CONCLUSION
+========================================================= */
+
+#timeless-home-conclusion {
+    position: relative;
+    margin-top: 70px;
+    padding: 58px 48px;
+    overflow: hidden;
+    text-align: center;
+    background: #302820;
+    border-radius: 22px;
+    box-shadow: 0 18px 50px rgba(48, 40, 32, 0.15);
+}
+
+
+/* Decorative background element */
+
+#timeless-home-conclusion::before {
+    content: "";
+    position: absolute;
+    top: -90px;
+    right: -90px;
+    width: 230px;
+    height: 230px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+#timeless-home-conclusion::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    left: -100px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   CONCLUSION TITLE
+========================================================= */
+
+#timeless-home-conclusion .conclusion-title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 24px;
+    color: #f7efe5;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   CONCLUSION TEXT
+========================================================= */
+
+#timeless-home-conclusion .conclusion-text {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto 16px;
+    color: #d8cec1;
+    font-size: 0.98rem;
+    line-height: 1.9;
+}
+
+#timeless-home-conclusion .conclusion-text:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #timeless-home-styling-article {
+        padding: 55px 20px 70px;
+    }
+
+    #timeless-home-styling-intro {
+        margin-bottom: 50px;
+    }
+
+    #timeless-home-styling-intro .article-title {
+        letter-spacing: -0.8px;
+    }
+
+    #timeless-home-styling-article .styling-idea {
+        margin-bottom: 20px;
+        padding: 30px 26px;
+        border-radius: 15px;
+    }
+
+    #timeless-home-styling-article .idea-title {
+        padding-left: 18px;
+    }
+
+    #timeless-home-conclusion {
+        margin-top: 50px;
+        padding: 45px 28px;
+        border-radius: 18px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    #timeless-home-styling-article {
+        padding: 42px 15px 55px;
+    }
+
+    #timeless-home-styling-intro {
+        margin-bottom: 38px;
+    }
+
+    #timeless-home-styling-intro .article-title {
+        font-size: 2.15rem;
+        line-height: 1.15;
+    }
+
+    #timeless-home-styling-intro .article-subtitle {
+        font-size: 1rem;
+    }
+
+    #timeless-home-styling-intro .intro-text,
+    #timeless-home-styling-article .idea-text,
+    #timeless-home-conclusion .conclusion-text {
+        font-size: 0.93rem;
+        line-height: 1.8;
+    }
+
+    #timeless-home-styling-article .styling-idea {
+        padding: 25px 20px;
+        border-radius: 13px;
+    }
+
+    #timeless-home-styling-article .idea-title {
+        font-size: 1.4rem;
+        padding-left: 16px;
+    }
+
+    #timeless-home-conclusion {
+        padding: 38px 21px;
+    }
+
+    #timeless-home-conclusion .conclusion-title {
+        font-size: 1.75rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCE MOTION FOR ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #timeless-home-styling-article .styling-idea {
+        transition: none;
+    }
+
+    #timeless-home-styling-article .styling-idea:hover {
+        transform: none;
+    }
+}
+
+
+
+
+       /* footer is starting here """""AVEEM' Company""""""" */
+
+
+       
+
+
+
+#footer{
+    background-color: var(--bg);
+    height: 20rem;
+    color: white;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    color: #7c6cff;
+    font-size: 30px;
+}
+
+
+footer a{
+    color: white;
+}
+
+.foote-rlinks{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.footer-right{
+    max-width: 500px;
+}
+
+.extra{
+    padding-left: 0px;
+    color: #7c6cff;
+}
+
+.legal-links a{
+    color: white;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.privacy{
+    border-right: 2px solid gray;
+    padding: 0px 30px;
+}
+
+
+
+
+
+
+
+
+
+

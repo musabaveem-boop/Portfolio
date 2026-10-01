@@ -2,13 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <link rel="stylesheet" href="skill.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aveem's Portfolio</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="skill.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<link rel="stylesheet" href="index.css">
+
+
 </head>
 
+
 <body>
+
+
+<!-- NAVBAR -->
+
   <header>
         
 
@@ -20,14 +38,16 @@
 
             <ul>
 
-                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="index.html" class=""> Home</a></li>
 
                 <li><a href="about.html">About</a></li>
 
                 <li><a href="skills.html"><span class="active">Skills</span></a></li>
 
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
 
+                <li><a href="contact.html">Contact</a></li>
+                
             </ul>
 
         </nav>
@@ -396,87 +416,310 @@
     </section>
 
 
+        <!-- This is Footer... -->
+
+    <footer >
+    <div id="footer">    
+      <div>
+        
+        <h3 class="logo-footer">Aveem's Portfolio</h3>
+        Explore Ideas. Build Skills.
+
+        <div class="foote-rlinks">
+          
+            <li><a href="index.html">Home</a><br /></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          
+        </div>
+      </div>
+
+      <hr style= "border-color: gray; height: 200px;">
+      <div class="footer-right">
+            <p>As an Amazon Associate I earn from qualifying purchases.</p>
+
+            <h4 class="extra">About Us:</h4>
+
+            <p>Aveem Portfolio is a personal website sharing web development, SEO, digital skills, useful tips, and creative ideas to help you learn and grow.</p>
+      </div>
+      <hr style= "border-color: gray; height: 200px;">
+      <div class="lastpart">
+        <h4>Contact Us:</h4>
+
+        <p>musab@gmail.com</p><br>
+
+        <h4>Phone Number:</h4>
+
+        <p>+92317 4166622</p>
+      </div>
+
+      </div>
+
+      
+
+      <div class="legal-links">
+        <div>
+        <a href="privacy_policy.html"><span class="privacy">Privacy Policy</span></a>
+        <a href="terms.html"><span class="privacy">Terms & Conditions</span></a>
+            </div>
+        <p class="lastpart">© 2026 Aveem Portfolio. All rights reserved.</p>
+      </div>
+
+      
+    </footer>
+
+
 
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
 
 
 
     <script>
-        var typed = new Typed('#element', {
-            strings: [' My Skills and Experties'],
-            typeSpeed: 50,
-        });
-    </script>
-
-    <script>
-        const cards = document.querySelectorAll(".card");
-
-        window.addEventListener("scroll", () => {
-
-            cards.forEach(card => {
-
-                let cardPosition = card.getBoundingClientRect().top;
-                let screenPosition = window.innerHeight - 100;
-
-                if (cardPosition < screenPosition) {
-                    card.classList.add("show");
-                }
-                else {
-                    card.classList.remove("show");
-                }
-
-            });
-
-        });
-
-
-        const progressSection = document.querySelector(".skill-progress");
-
-        const fills = document.querySelectorAll(".fill");
-
-        window.addEventListener("scroll", () => {
-
-            const sectionTop = progressSection.getBoundingClientRect().top;
-
-            if (sectionTop < window.innerHeight - 100) {
-
-                document.querySelector(".html").style.width = "90%";
-                document.querySelector(".css").style.width = "85%";
-                document.querySelector(".js").style.width = "60%";
-                document.querySelector(".seo").style.width = "80%";
-
-            }
-
-        });
 
 
 
+/* =========================
+        TYPED JS
+========================= */
 
+var typed = new Typed('#element', {
 
+    strings: [' My Skills and Experties'],
 
+    typeSpeed: 50,
 
-
-        const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.querySelector(".nav-menu");
-
-menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
 });
 
 
 
 
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
 
-    if (window.scrollY > 40) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
+/* =========================
+        CARDS ANIMATION
+========================= */
+
+
+const cards = document.querySelectorAll(".card");
+
+
+window.addEventListener("scroll",()=>{
+
+
+    cards.forEach(card=>{
+
+
+        let cardPosition = card.getBoundingClientRect().top;
+
+        let screenPosition = window.innerHeight - 100;
+
+
+        if(cardPosition < screenPosition){
+
+            card.classList.add("show");
+
+        }
+        else{
+
+            card.classList.remove("show");
+
+        }
+
+
+    });
+
+
+});
+
+
+
+
+
+
+
+/* =========================
+        SKILL PROGRESS
+========================= */
+
+
+const progressSection = document.querySelector(".skill-progress");
+
+
+if(progressSection){
+
+
+window.addEventListener("scroll",()=>{
+
+
+    const sectionTop = progressSection.getBoundingClientRect().top;
+
+
+    if(sectionTop < window.innerHeight - 100){
+
+
+        document.querySelector(".html").style.width="90%";
+
+        document.querySelector(".css").style.width="85%";
+
+        document.querySelector(".js").style.width="60%";
+
+        document.querySelector(".seo").style.width="80%";
+
+
     }
+
+
 });
 
-    </script>
+
+}
+
+
+
+
+
+    // Scroll Reveal Animation
+
+const revealElements = document.querySelectorAll(
+    ".stat-card, .timeline-box, .info-card, .cta-box"
+);
+
+
+function revealOnScroll(){
+
+    revealElements.forEach((element)=>{
+
+        let windowHeight = window.innerHeight;
+
+        let elementTop = element.getBoundingClientRect().top;
+
+        let revealPoint = 120;
+
+
+        if(elementTop < windowHeight - revealPoint){
+
+            element.classList.add("show");
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
+
+
+
+
+
+
+
+
+
+// 3D Tilt Effect
+
+const tiltCards = document.querySelectorAll(
+    ".stat-card, .info-card, .timeline-box"
+);
+
+
+tiltCards.forEach((card)=>{
+
+
+    card.addEventListener("mousemove",(e)=>{
+
+
+        const rect = card.getBoundingClientRect();
+
+
+        const x = e.clientX - rect.left;
+
+        const y = e.clientY - rect.top;
+
+
+        const centerX = rect.width / 2;
+
+        const centerY = rect.height / 2;
+
+
+        const rotateX = ((y - centerY) / centerY) * 15;
+
+        const rotateY = ((x - centerX) / centerX) * 15;
+
+
+
+        card.style.transform =
+        `perspective(800px)
+        rotateX(${-rotateX}deg)
+        rotateY(${rotateY}deg)
+        translateY(-10px)`;
+
+
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+
+        card.style.transform =
+        "perspective(800px) rotateX(0) rotateY(0) translateY(0)";
+
+
+    });
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   HEADER SCROLL
+========================= */
+
+const header = document.querySelector("header");
+
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 20){
+
+        header.classList.add("scrolled");
+
+    }
+    else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+</script>
+
+
 
 
 
@@ -485,3 +728,4 @@ window.addEventListener("scroll", () => {
 </body>
 
 </html>
+

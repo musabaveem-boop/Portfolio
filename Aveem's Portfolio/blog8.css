@@ -1,0 +1,520 @@
+/* =========================
+        RESET
+========================= */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+}
+
+
+
+:root{
+
+    --primary:#7c6cff;
+    --bg:#080812;
+    --card:#12121f;
+    --text:#ffffff;
+    --gray:#a1a1aa;
+
+}
+
+
+
+body{
+
+    background-color: var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* BACKGROUND EFFECT */
+
+
+body::before{
+
+    content:"";
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    background:var(--primary);
+
+    filter:blur(170px);
+
+    opacity:.18;
+
+    top:100px;
+    left:-150px;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#a855f7;
+
+    filter:blur(170px);
+
+    opacity:.15;
+
+    right:-120px;
+    bottom:80px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* =========================
+        NAVBAR
+========================= */
+
+   header {
+
+           width: 100%;
+           height: 90px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(11,17,32,.92);
+            transition: .3s;
+
+       }
+
+
+       .logo {
+
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
+
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
+
+       nav ul {
+
+           display: flex;
+           list-style: none;
+           gap: 35px;
+
+       }
+
+       nav ul li a {
+
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
+
+       }
+
+       nav ul li a:hover {
+
+           color: #7c6cff;
+
+       }
+
+       nav ul li a::after {
+
+           content: "";
+           position: absolute;
+
+           left: 0;
+           bottom: -8px;
+
+           width: 0;
+           height: 2px;
+
+           background: #7c6cff;
+
+           transition: .3s;
+
+       }
+
+       nav ul li a:hover::after {
+
+           width: 100%;
+
+       }
+
+       .active {
+
+           color: #7c6cff;
+
+       }
+
+       .active::after {
+
+           width: 100%;
+
+       }
+
+       .hire-btn {
+
+           text-decoration: none;
+
+           background: #7c6cff;
+
+           color: white;
+
+           padding: 15px 35px;
+
+           border-radius: 12px;
+
+           transition: .3s;
+
+       }
+
+       .hire-btn:hover {
+
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
+
+
+
+
+/* ======================================================================================= */
+
+#smart-storage-beautiful-spaces {
+max-width: 920px;
+margin: 70px auto;
+padding: 0 28px;
+color: white;
+font-family: Georgia, "Times New Roman", serif;
+line-height: 1.85;
+}
+
+/* =========================
+ARTICLE HEADER
+========================= */
+
+.smart-storage-header {
+max-width: 820px;
+margin: 0 auto 65px;
+text-align: center;
+}
+
+.smart-storage-header h1 {
+margin: 0 0 24px;
+color: #878686;
+font-size: clamp(38px, 5vw, 62px);
+font-weight: 500;
+line-height: 1.12;
+letter-spacing: -1.2px;
+}
+
+.smart-storage-header p {
+max-width: 760px;
+margin: 0 auto 18px;
+color: #a1a09f;
+font-size: 18px;
+line-height: 1.9;
+}
+
+.smart-storage-header p:last-child {
+margin-bottom: 0;
+}
+
+/* =========================
+MAIN SECTIONS
+========================= */
+
+#smart-storage-beautiful-spaces > section {
+margin-bottom: 62px;
+}
+
+#smart-storage-beautiful-spaces > section:last-child {
+margin-bottom: 0;
+}
+
+/* =========================
+SECTION HEADINGS
+========================= */
+
+#smart-storage-beautiful-spaces h2 {
+margin: 0 0 22px;
+color: #a8a7a5;
+font-size: 30px;
+font-weight: 500;
+line-height: 1.3;
+letter-spacing: -0.4px;
+}
+
+#smart-storage-beautiful-spaces h3 {
+margin: 34px 0 14px;
+color: #aaa9a8;
+font-size: 22px;
+font-weight: 600;
+line-height: 1.4;
+}
+
+#smart-storage-beautiful-spaces p {
+margin: 0 0 19px;
+color: #b8b6b5;
+font-size: 17px;
+line-height: 1.9;
+}
+
+#smart-storage-beautiful-spaces p:last-child {
+margin-bottom: 0;
+}
+
+/* =========================
+ROOM STORAGE SECTIONS
+========================= */
+
+#room-by-room-storage {
+padding-top: 4px;
+}
+
+#bedroom-storage,
+#living-room-storage,
+#kitchen-storage,
+#bathroom-storage {
+margin-top: 38px;
+}
+
+#bedroom-storage h3,
+#living-room-storage h3,
+#kitchen-storage h3,
+#bathroom-storage h3 {
+margin-top: 0;
+}
+
+/* =========================
+FINAL SECTION
+========================= */
+
+#small-storage-changes {
+padding-bottom: 20px;
+}
+
+#small-storage-changes p:last-child {
+margin-top: 28px;
+color: #4f4842;
+font-size: 18px;
+}
+
+/* =========================
+RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+
+#smart-storage-beautiful-spaces {
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.smart-storage-header {
+    margin-bottom: 48px;
+}
+
+.smart-storage-header h1 {
+    font-size: 40px;
+}
+
+.smart-storage-header p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#smart-storage-beautiful-spaces > section {
+    margin-bottom: 48px;
+}
+
+#smart-storage-beautiful-spaces h2 {
+    font-size: 27px;
+}
+
+#smart-storage-beautiful-spaces h3 {
+    font-size: 21px;
+}
+
+#smart-storage-beautiful-spaces p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#small-storage-changes p:last-child {
+    font-size: 17px;
+}
+
+
+}
+
+/* =========================
+SMALL MOBILE SCREENS
+========================= */
+
+@media (max-width: 480px) {
+
+
+#smart-storage-beautiful-spaces {
+    margin: 35px auto;
+    padding: 0 16px;
+}
+
+.smart-storage-header {
+    margin-bottom: 40px;
+}
+
+.smart-storage-header h1 {
+    font-size: 34px;
+    letter-spacing: -0.7px;
+}
+
+.smart-storage-header p {
+    font-size: 15px;
+}
+
+#smart-storage-beautiful-spaces > section {
+    margin-bottom: 42px;
+}
+
+#smart-storage-beautiful-spaces h2 {
+    font-size: 25px;
+}
+
+#smart-storage-beautiful-spaces h3 {
+    font-size: 20px;
+}
+
+#smart-storage-beautiful-spaces p {
+    font-size: 15.5px;
+    line-height: 1.8;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+       /* footer is starting here """""AVEEM' Company""""""" */
+
+
+       
+
+
+
+#footer{
+    background-color: var(--bg);
+    height: 20rem;
+    color: white;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    color: #7c6cff;
+    font-size: 30px;
+}
+
+
+footer a{
+    color: white;
+}
+
+.foote-rlinks{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.footer-right{
+    max-width: 500px;
+}
+
+.extra{
+    padding-left: 0px;
+    color: #7c6cff;
+}
+
+.legal-links a{
+    color: white;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.privacy{
+    border-right: 2px solid gray;
+    padding: 0px 30px;
+}
+
+
+.affiliate-disclosure {
+    max-width: 700px;
+    margin: 25px auto 0;
+    color: #817970;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 30px;
+}

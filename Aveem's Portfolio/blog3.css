@@ -1,0 +1,632 @@
+/* =========================
+        RESET
+========================= */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+}
+
+
+
+:root{
+
+    --primary:#7c6cff;
+    --bg:#080812;
+    --card:#12121f;
+    --text:#ffffff;
+    --gray:#a1a1aa;
+
+}
+
+
+
+body{
+
+    background-color: var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* BACKGROUND EFFECT */
+
+
+body::before{
+
+    content:"";
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    background:var(--primary);
+
+    filter:blur(170px);
+
+    opacity:.18;
+
+    top:100px;
+    left:-150px;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#a855f7;
+
+    filter:blur(170px);
+
+    opacity:.15;
+
+    right:-120px;
+    bottom:80px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* =========================
+        NAVBAR
+========================= */
+
+   header {
+
+           width: 100%;
+           height: 90px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(11,17,32,.92);
+            transition: .3s;
+
+       }
+
+
+       .logo {
+
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
+
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
+
+       nav ul {
+
+           display: flex;
+           list-style: none;
+           gap: 35px;
+
+       }
+
+       nav ul li a {
+
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
+
+       }
+
+       nav ul li a:hover {
+
+           color: #7c6cff;
+
+       }
+
+       nav ul li a::after {
+
+           content: "";
+           position: absolute;
+
+           left: 0;
+           bottom: -8px;
+
+           width: 0;
+           height: 2px;
+
+           background: #7c6cff;
+
+           transition: .3s;
+
+       }
+
+       nav ul li a:hover::after {
+
+           width: 100%;
+
+       }
+
+       .active {
+
+           color: #7c6cff;
+
+       }
+
+       .active::after {
+
+           width: 100%;
+
+       }
+
+       .hire-btn {
+
+           text-decoration: none;
+
+           background: #7c6cff;
+
+           color: white;
+
+           padding: 15px 35px;
+
+           border-radius: 12px;
+
+           transition: .3s;
+
+       }
+
+       .hire-btn:hover {
+
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
+
+
+
+
+
+
+
+
+
+       /* =============================================================== */
+
+
+
+
+       
+/* =========================================================
+   STYLISH HOME ORGANIZATION ARTICLE
+   Dark Luxury • Warm Editorial • Responsive
+========================================================= */
+
+
+/* =========================================================
+   ARTICLE WRAPPER
+========================================================= */
+
+#stylish-home-organization-article {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 30px 90px;
+    color: #e9e4dc;
+    background: #0d0c0b;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ARTICLE INTRO
+========================================================= */
+
+#article-intro {
+    margin-bottom: 65px;
+}
+
+.article-title {
+    margin: 0 0 24px;
+    color: #f4eee5;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.article-intro-text {
+    max-width: 820px;
+    margin: 0 0 20px;
+    color: #bdb5aa;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   AMAZON / AFFILIATE DISCLOSURE
+========================================================= */
+
+#affiliate-disclosure {
+    margin-top: 32px;
+    padding: 18px 22px;
+    border-left: 3px solid #b58b5a;
+    background: #151311;
+    border-radius: 0 8px 8px 0;
+}
+
+.affiliate-disclosure-text {
+    margin: 0;
+    color: #a9a198;
+    font-size: 0.86rem;
+    line-height: 1.7;
+}
+
+.affiliate-disclosure-text strong {
+    color: #d0aa78;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MAIN ARTICLE SECTIONS
+========================================================= */
+
+.organization-section {
+    position: relative;
+    margin-bottom: 58px;
+    padding: 0 0 52px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.organization-section:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.organization-heading {
+    position: relative;
+    margin: 0 0 25px;
+    padding-left: 20px;
+    color: #f0e8dc;
+    font-size: clamp(1.55rem, 3vw, 2.15rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+}
+
+.organization-heading::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 4px;
+    height: calc(100% - 10px);
+    border-radius: 10px;
+    background: #b58b5a;
+}
+
+
+/* =========================================================
+   SECTION CONTENT
+========================================================= */
+
+.organization-content {
+    padding-left: 24px;
+}
+
+.organization-content p {
+    margin: 0 0 20px;
+    color: #b9b1a7;
+    font-size: 0.98rem;
+    line-height: 1.9;
+}
+
+.organization-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ORGANIZATION TIPS
+========================================================= */
+
+.organization-tip {
+    margin-top: 28px !important;
+    padding: 18px 20px;
+    border: 1px solid rgba(181, 139, 90, 0.22);
+    border-radius: 8px;
+    background: rgba(181, 139, 90, 0.06);
+}
+
+.organization-tip strong {
+    color: #d0aa78;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ADDITIONAL SECTIONS
+========================================================= */
+
+.additional-section {
+    margin-top: 70px;
+}
+
+
+/* =========================================================
+   FINAL THOUGHTS
+========================================================= */
+
+.final-section {
+    margin-top: 75px;
+    padding: 35px 30px;
+    border: 1px solid rgba(181, 139, 90, 0.18);
+    border-radius: 12px;
+    background: linear-gradient(
+        145deg,
+        #151311,
+        #100f0d
+    );
+}
+
+.final-section .organization-heading {
+    margin-bottom: 28px;
+}
+
+.final-section .organization-content {
+    padding-left: 24px;
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+#stylish-home-organization-article ::selection {
+    color: #0d0c0b;
+    background: #c8a878;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #stylish-home-organization-article {
+        max-width: 100%;
+        padding: 55px 24px 70px;
+    }
+
+    #article-intro {
+        margin-bottom: 50px;
+    }
+
+    .article-title {
+        font-size: 2.4rem;
+        letter-spacing: -1px;
+    }
+
+    .article-intro-text {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .organization-section {
+        margin-bottom: 48px;
+        padding-bottom: 42px;
+    }
+
+    .organization-heading {
+        font-size: 1.65rem;
+        padding-left: 17px;
+    }
+
+    .organization-content {
+        padding-left: 20px;
+    }
+
+    .organization-content p {
+        font-size: 0.95rem;
+        line-height: 1.85;
+    }
+
+    .final-section {
+        padding: 28px 22px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    #stylish-home-organization-article {
+        padding: 42px 17px 55px;
+    }
+
+    #article-intro {
+        margin-bottom: 42px;
+    }
+
+    .article-title {
+        font-size: 2rem;
+        line-height: 1.18;
+    }
+
+    .article-intro-text {
+        font-size: 0.93rem;
+        line-height: 1.8;
+    }
+
+    #affiliate-disclosure {
+        margin-top: 26px;
+        padding: 15px 17px;
+    }
+
+    .affiliate-disclosure-text {
+        font-size: 0.8rem;
+    }
+
+    .organization-section {
+        margin-bottom: 40px;
+        padding-bottom: 35px;
+    }
+
+    .organization-heading {
+        margin-bottom: 20px;
+        padding-left: 15px;
+        font-size: 1.4rem;
+        line-height: 1.35;
+    }
+
+    .organization-heading::before {
+        width: 3px;
+    }
+
+    .organization-content {
+        padding-left: 0;
+    }
+
+    .organization-content p {
+        margin-bottom: 17px;
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .organization-tip {
+        padding: 15px 16px;
+    }
+
+    .additional-section {
+        margin-top: 50px;
+    }
+
+    .final-section {
+        margin-top: 55px;
+        padding: 25px 18px;
+        border-radius: 10px;
+    }
+
+    .final-section .organization-content {
+        padding-left: 0;
+    }
+
+}
+
+
+
+
+       
+
+
+
+       /* footer is starting here """""AVEEM' Company""""""" */
+
+
+       
+
+
+
+#footer{
+    background-color: var(--bg);
+    height: 20rem;
+    color: white;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    color: #7c6cff;
+    font-size: 30px;
+}
+
+
+footer a{
+    color: white;
+}
+
+.foote-rlinks{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.footer-right{
+    max-width: 500px;
+}
+
+.extra{
+    padding-left: 0px;
+    color: #7c6cff;
+}
+
+.legal-links a{
+    color: white;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.privacy{
+    border-right: 2px solid gray;
+    padding: 0px 30px;
+}
+
+
+
+
+
+
+
+
+
+

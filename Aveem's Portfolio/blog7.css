@@ -1,0 +1,539 @@
+/* =========================
+        RESET
+========================= */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+}
+
+
+
+:root{
+
+    --primary:#7c6cff;
+    --bg:#080812;
+    --card:#12121f;
+    --text:#ffffff;
+    --gray:#a1a1aa;
+
+}
+
+
+
+body{
+
+    background-color: var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* BACKGROUND EFFECT */
+
+
+body::before{
+
+    content:"";
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    background:var(--primary);
+
+    filter:blur(170px);
+
+    opacity:.18;
+
+    top:100px;
+    left:-150px;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#a855f7;
+
+    filter:blur(170px);
+
+    opacity:.15;
+
+    right:-120px;
+    bottom:80px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* =========================
+        NAVBAR
+========================= */
+
+   header {
+
+           width: 100%;
+           height: 90px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(11,17,32,.92);
+            transition: .3s;
+
+       }
+
+
+       .logo {
+
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
+
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
+
+       nav ul {
+
+           display: flex;
+           list-style: none;
+           gap: 35px;
+
+       }
+
+       nav ul li a {
+
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
+
+       }
+
+       nav ul li a:hover {
+
+           color: #7c6cff;
+
+       }
+
+       nav ul li a::after {
+
+           content: "";
+           position: absolute;
+
+           left: 0;
+           bottom: -8px;
+
+           width: 0;
+           height: 2px;
+
+           background: #7c6cff;
+
+           transition: .3s;
+
+       }
+
+       nav ul li a:hover::after {
+
+           width: 100%;
+
+       }
+
+       .active {
+
+           color: #7c6cff;
+
+       }
+
+       .active::after {
+
+           width: 100%;
+
+       }
+
+       .hire-btn {
+
+           text-decoration: none;
+
+           background: #7c6cff;
+
+           color: white;
+
+           padding: 15px 35px;
+
+           border-radius: 12px;
+
+           transition: .3s;
+
+       }
+
+       .hire-btn:hover {
+
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
+
+
+
+
+/* ======================================================================================= */
+
+
+
+
+
+
+
+/* =========================================================
+   TIMELESS HOME STYLING
+   Clean • Premium • Responsive • Scoped
+========================================================= */
+
+#timeless-home-styling {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 24px;
+    color: #302c28;
+    background: #fbfaf7;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.85;
+    box-sizing: border-box;
+}
+
+#timeless-home-styling *,
+#timeless-home-styling *::before,
+#timeless-home-styling *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+#timeless-home-styling > h1 {
+    max-width: 760px;
+    margin: 0 auto 18px;
+    color: #211e1b;
+    font-size: clamp(2.5rem, 6vw, 4.4rem);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    text-align: center;
+}
+
+#timeless-home-styling > .article-subtitle {
+    max-width: 680px;
+    margin: 0 auto 48px;
+    color: #756c63;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/* =========================================================
+   GENERAL TEXT
+========================================================= */
+
+#timeless-home-styling p {
+    margin: 0 0 22px;
+    font-size: 1.05rem;
+}
+
+#timeless-home-styling > p:not(.article-subtitle) {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#timeless-home-styling section {
+    max-width: 780px;
+    margin: 78px auto 0;
+}
+
+#timeless-home-styling h2 {
+    margin: 0 0 25px;
+    color: #211e1b;
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+#timeless-home-styling strong {
+    color: #211e1b;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+#timeless-home-styling > p:nth-of-type(2) {
+    color: #5d554e;
+    font-size: 1.15rem;
+}
+
+#timeless-home-styling > p:nth-of-type(3) {
+    color: #403a35;
+}
+
+
+/* =========================================================
+   STYLING SECTIONS
+========================================================= */
+
+#timeless-home-styling-ideas h2 {
+    padding-top: 12px;
+    border-top: 1px solid #ddd6ce;
+}
+
+#timeless-home-styling-ideas h2:not(:first-child) {
+    margin-top: 62px;
+}
+
+#timeless-home-styling-ideas p {
+    color: #514a44;
+}
+
+
+/* =========================================================
+   SIMPLE APPROACH
+========================================================= */
+
+#timeless-home-styling .styling-tip {
+    margin: 30px 0 0;
+    padding: 22px 26px;
+    border-left: 3px solid #b69a78;
+    background: #f2eee8;
+    color: #554d45;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+#timeless-home-styling .styling-tip strong {
+    color: #3b342e;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+#timeless-home-styling .styling-changes-list {
+    margin: 30px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#timeless-home-styling .styling-changes-list li {
+    position: relative;
+    margin: 0;
+    padding: 13px 0 13px 30px;
+    border-bottom: 1px solid #e4ded7;
+    color: #514a44;
+    font-size: 1.02rem;
+}
+
+#timeless-home-styling .styling-changes-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #b69a78;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FINAL CONCLUSION
+========================================================= */
+
+#timeless-home-styling #timeless-home-conclusion {
+    margin-top: 90px;
+    padding-top: 55px;
+    border-top: 1px solid #d9d1c8;
+}
+
+#timeless-home-styling .conclusion-highlight {
+    margin-top: 35px;
+    padding: 30px 32px;
+    border: 1px solid #ded6cd;
+    background: #f4f0ea;
+    color: #302a25;
+    font-size: 1.12rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    #timeless-home-styling {
+        padding: 50px 20px;
+    }
+
+    #timeless-home-styling > h1 {
+        font-size: 2.65rem;
+    }
+
+    #timeless-home-styling > .article-subtitle {
+        margin-bottom: 38px;
+        font-size: 0.98rem;
+    }
+
+    #timeless-home-styling p {
+        font-size: 1rem;
+    }
+
+    #timeless-home-styling section {
+        margin-top: 60px;
+    }
+
+    #timeless-home-styling h2 {
+        font-size: 1.75rem;
+    }
+
+    #timeless-home-styling-ideas h2:not(:first-child) {
+        margin-top: 50px;
+    }
+
+    #timeless-home-styling .styling-tip {
+        padding: 19px 20px;
+    }
+
+    #timeless-home-styling .conclusion-highlight {
+        padding: 24px 22px;
+    }
+}
+
+
+
+
+
+
+
+
+
+       
+
+
+
+       /* footer is starting here """""AVEEM' Company""""""" */
+
+
+       
+
+
+
+#footer{
+    background-color: var(--bg);
+    height: 20rem;
+    color: white;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    color: #7c6cff;
+    font-size: 30px;
+}
+
+
+footer a{
+    color: white;
+}
+
+.foote-rlinks{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.footer-right{
+    max-width: 500px;
+}
+
+.extra{
+    padding-left: 0px;
+    color: #7c6cff;
+}
+
+.legal-links a{
+    color: white;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.privacy{
+    border-right: 2px solid gray;
+    padding: 0px 30px;
+}
+
+
+
+
+
+.affiliate-disclosure {
+    max-width: 700px;
+    margin: 25px auto 0;
+    color: #817970;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    text-align: center;
+}

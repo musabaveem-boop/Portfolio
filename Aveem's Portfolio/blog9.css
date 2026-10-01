@@ -1,0 +1,513 @@
+/* =========================
+        RESET
+========================= */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+}
+
+
+
+:root{
+
+    --primary:#7c6cff;
+    --bg:#080812;
+    --card:#12121f;
+    --text:#ffffff;
+    --gray:#a1a1aa;
+
+}
+
+
+
+body{
+
+    background-color: var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* BACKGROUND EFFECT */
+
+
+body::before{
+
+    content:"";
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    background:var(--primary);
+
+    filter:blur(170px);
+
+    opacity:.18;
+
+    top:100px;
+    left:-150px;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#a855f7;
+
+    filter:blur(170px);
+
+    opacity:.15;
+
+    right:-120px;
+    bottom:80px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* =========================
+        NAVBAR
+========================= */
+
+   header {
+
+           width: 100%;
+           height: 90px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(11,17,32,.92);
+            transition: .3s;
+
+       }
+
+
+       .logo {
+
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
+
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
+
+       nav ul {
+
+           display: flex;
+           list-style: none;
+           gap: 35px;
+
+       }
+
+       nav ul li a {
+
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
+
+       }
+
+       nav ul li a:hover {
+
+           color: #7c6cff;
+
+       }
+
+       nav ul li a::after {
+
+           content: "";
+           position: absolute;
+
+           left: 0;
+           bottom: -8px;
+
+           width: 0;
+           height: 2px;
+
+           background: #7c6cff;
+
+           transition: .3s;
+
+       }
+
+       nav ul li a:hover::after {
+
+           width: 100%;
+
+       }
+
+       .active {
+
+           color: #7c6cff;
+
+       }
+
+       .active::after {
+
+           width: 100%;
+
+       }
+
+       .hire-btn {
+
+           text-decoration: none;
+
+           background: #7c6cff;
+
+           color: white;
+
+           padding: 15px 35px;
+
+           border-radius: 12px;
+
+           transition: .3s;
+
+       }
+
+       .hire-btn:hover {
+
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
+
+
+
+
+/* ======================================================================================= */
+
+#moody-bedroom-elegance {
+    --moody-bg: #171513;
+    --moody-surface: #211e1b;
+    --moody-surface-light: #292521;
+    --moody-text: #eee8df;
+    --moody-muted: #b9afa4;
+    --moody-accent: #c6a77a;
+    --moody-border: rgba(198, 167, 122, 0.18);
+    --moody-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+
+    max-width: 1050px;
+    margin: 60px auto;
+    padding: 0 24px;
+    color: var(--moody-text);
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+#moody-bedroom-elegance *,
+#moody-bedroom-elegance *::before,
+#moody-bedroom-elegance *::after {
+    box-sizing: border-box;
+}
+
+#moody-bedroom-elegance .moody-bedroom-container {
+    background: var(--moody-bg);
+    border: 1px solid var(--moody-border);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--moody-shadow);
+}
+
+#moody-bedroom-elegance .moody-bedroom-intro {
+    padding: 70px 70px 62px;
+    text-align: center;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(198, 167, 122, 0.09),
+            transparent 45%
+        ),
+        var(--moody-surface);
+    border-bottom: 1px solid var(--moody-border);
+}
+
+#moody-bedroom-elegance .moody-bedroom-intro h1 {
+    margin: 0 auto 22px;
+    max-width: 850px;
+    color: var(--moody-text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+#moody-bedroom-elegance .moody-bedroom-intro h1::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 2px;
+    margin: 25px auto 0;
+    background: var(--moody-accent);
+}
+
+#moody-bedroom-elegance .moody-bedroom-intro p {
+    max-width: 820px;
+    margin: 0 auto 17px;
+    color: var(--moody-muted);
+    font-size: 17px;
+}
+
+#moody-bedroom-elegance .moody-bedroom-intro p:last-child {
+    margin-bottom: 0;
+}
+
+#moody-bedroom-elegance .moody-bedroom-section {
+    position: relative;
+    padding: 52px 70px;
+    border-bottom: 1px solid var(--moody-border);
+}
+
+#moody-bedroom-elegance .moody-bedroom-section:nth-child(even) {
+    background: var(--moody-surface);
+}
+
+#moody-bedroom-elegance .moody-bedroom-section:last-child {
+    border-bottom: 0;
+}
+
+#moody-bedroom-elegance .moody-bedroom-section h2 {
+    position: relative;
+    margin: 0 0 24px;
+    padding-left: 20px;
+    color: var(--moody-text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(27px, 3vw, 36px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+#moody-bedroom-elegance .moody-bedroom-section h2::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 3px;
+    height: calc(100% - 10px);
+    border-radius: 10px;
+    background: var(--moody-accent);
+}
+
+#moody-bedroom-elegance .moody-bedroom-section p {
+    max-width: 850px;
+    margin: 0 0 18px;
+    color: var(--moody-muted);
+    font-size: 16.5px;
+}
+
+#moody-bedroom-elegance .moody-bedroom-section p:last-child {
+    margin-bottom: 0;
+}
+
+#moody-bedroom-elegance .moody-bedroom-section strong {
+    color: var(--moody-text);
+    font-weight: 650;
+}
+
+#moody-bedroom-elegance .moody-bedroom-section:hover {
+    background: var(--moody-surface-light);
+    transition: background 0.3s ease;
+}
+
+#moody-bedroom-elegance .moody-bedroom-conclusion {
+    padding-top: 62px;
+    padding-bottom: 65px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(198, 167, 122, 0.08),
+            transparent 55%
+        ),
+        var(--moody-surface);
+}
+
+#moody-bedroom-elegance .moody-bedroom-conclusion h2 {
+    margin-bottom: 27px;
+}
+
+@media (max-width: 768px) {
+    #moody-bedroom-elegance {
+        margin: 35px auto;
+        padding: 0 15px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-container {
+        border-radius: 18px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-intro {
+        padding: 48px 28px 42px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-intro h1 {
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-intro p {
+        font-size: 15.5px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-section {
+        padding: 40px 28px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-section h2 {
+        font-size: 29px;
+        padding-left: 16px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-section p {
+        font-size: 15.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    #moody-bedroom-elegance {
+        margin: 25px auto;
+        padding: 0 10px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-intro {
+        padding: 40px 21px 35px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-intro h1 {
+        font-size: 34px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-section {
+        padding: 34px 21px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-section h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    #moody-bedroom-elegance .moody-bedroom-section p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+       /* footer is starting here """""AVEEM' Company""""""" */
+
+
+       
+
+
+
+#footer{
+    background-color: var(--bg);
+    height: 20rem;
+    color: white;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    color: #7c6cff;
+    font-size: 30px;
+}
+
+
+footer a{
+    color: white;
+}
+
+.foote-rlinks{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.footer-right{
+    max-width: 500px;
+}
+
+.extra{
+    padding-left: 0px;
+    color: #7c6cff;
+}
+
+.legal-links a{
+    color: white;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.privacy{
+    border-right: 2px solid gray;
+    padding: 0px 30px;
+}

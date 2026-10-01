@@ -1,0 +1,924 @@
+/* =========================
+        RESET
+========================= */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+}
+
+
+
+:root{
+
+    --primary:#7c6cff;
+    --bg:#080812;
+    --card:#12121f;
+    --text:#ffffff;
+    --gray:#a1a1aa;
+
+}
+
+
+
+body{
+
+    background-color: var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* BACKGROUND EFFECT */
+
+
+body::before{
+
+    content:"";
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    background:var(--primary);
+
+    filter:blur(170px);
+
+    opacity:.18;
+
+    top:100px;
+    left:-150px;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#a855f7;
+
+    filter:blur(170px);
+
+    opacity:.15;
+
+    right:-120px;
+    bottom:80px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* =========================
+        NAVBAR
+========================= */
+
+   header {
+
+           width: 100%;
+           height: 90px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(11,17,32,.92);
+            transition: .3s;
+
+       }
+
+
+       .logo {
+
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
+
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
+
+       nav ul {
+
+           display: flex;
+           list-style: none;
+           gap: 35px;
+
+       }
+
+       nav ul li a {
+
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
+
+       }
+
+       nav ul li a:hover {
+
+           color: #7c6cff;
+
+       }
+
+       nav ul li a::after {
+
+           content: "";
+           position: absolute;
+
+           left: 0;
+           bottom: -8px;
+
+           width: 0;
+           height: 2px;
+
+           background: #7c6cff;
+
+           transition: .3s;
+
+       }
+
+       nav ul li a:hover::after {
+
+           width: 100%;
+
+       }
+
+       .active {
+
+           color: #7c6cff;
+
+       }
+
+       .active::after {
+
+           width: 100%;
+
+       }
+
+       .hire-btn {
+
+           text-decoration: none;
+
+           background: #7c6cff;
+
+           color: white;
+
+           padding: 15px 35px;
+
+           border-radius: 12px;
+
+           transition: .3s;
+
+       }
+
+       .hire-btn:hover {
+
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
+
+
+
+
+/* ======================================================================================= */
+
+       
+/* =========================================================
+   COZY BEDROOM STYLING ESSENTIALS
+   Professional • Elegant • Cozy • Responsive
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --cozy-bg: #f7f3ee;
+    --cozy-surface: #ffffff;
+    --cozy-surface-soft: #f1ebe4;
+
+    --cozy-text: #302a26;
+    --cozy-text-soft: #6f655e;
+
+    --cozy-heading: #241e1a;
+    --cozy-accent: #9a7458;
+    --cozy-accent-dark: #76553f;
+
+    --cozy-border: #e5ddd5;
+
+    --cozy-shadow:
+        0 18px 50px rgba(54, 40, 29, 0.08);
+
+    --cozy-radius: 18px;
+}
+
+
+/* =========================================================
+   MAIN ARTICLE
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials {
+    width: min(100% - 40px, 920px);
+    margin: 70px auto;
+    padding: 0;
+
+    color: var(--cozy-text);
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 17px;
+    line-height: 1.85;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   ARTICLE INTRO
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials .cozy-bedroom-header {
+    position: relative;
+
+    margin-bottom: 55px;
+    padding: 55px 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee5dc 0%,
+            #f8f4ef 55%,
+            #e9dfd5 100%
+        );
+
+    border: 1px solid rgba(154, 116, 88, 0.18);
+    border-radius: 26px;
+
+    box-shadow: var(--cozy-shadow);
+
+    overflow: hidden;
+}
+
+
+/* Decorative glow */
+
+#cozy-bedroom-styling-essentials .cozy-bedroom-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -100px;
+    right: -70px;
+
+    background: rgba(154, 116, 88, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Small decorative line */
+
+#cozy-bedroom-styling-essentials .cozy-bedroom-header::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin-top: 28px;
+
+    background: var(--cozy-accent);
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials h1 {
+    position: relative;
+
+    margin: 0 0 22px;
+
+    color: var(--cozy-heading);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -1.4px;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials .cozy-bedroom-header p {
+    position: relative;
+
+    max-width: 760px;
+
+    margin: 0 0 17px;
+
+    color: var(--cozy-text-soft);
+
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+#cozy-bedroom-styling-essentials .cozy-bedroom-header p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ARTICLE SECTIONS
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials section {
+    position: relative;
+
+    margin-bottom: 26px;
+    padding: 38px 42px;
+
+    background: var(--cozy-surface);
+
+    border: 1px solid var(--cozy-border);
+    border-radius: var(--cozy-radius);
+
+    box-shadow: 0 10px 35px rgba(54, 40, 29, 0.045);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Subtle hover */
+
+#cozy-bedroom-styling-essentials section:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(154, 116, 88, 0.35);
+
+    box-shadow:
+        0 16px 42px rgba(54, 40, 29, 0.08);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials section h2 {
+    position: relative;
+
+    margin: 0 0 22px;
+
+    padding-left: 18px;
+
+    color: var(--cozy-heading);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+}
+
+
+/* Accent line beside every H2 */
+
+#cozy-bedroom-styling-essentials section h2::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 5px;
+
+    width: 4px;
+    height: calc(100% - 10px);
+
+    background: var(--cozy-accent);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials section p {
+    margin: 0 0 18px;
+
+    color: var(--cozy-text-soft);
+
+    font-size: 16.5px;
+    line-height: 1.85;
+}
+
+#cozy-bedroom-styling-essentials section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   STRONG TEXT
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials strong {
+    color: var(--cozy-heading);
+
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials ul,
+#cozy-bedroom-styling-essentials ol {
+    margin: 20px 0 22px;
+    padding: 0;
+
+    color: var(--cozy-text-soft);
+}
+
+
+/* =========================================================
+   UNORDERED LIST
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials ul {
+    list-style: none;
+}
+
+
+/* Custom bullet */
+
+#cozy-bedroom-styling-essentials ul li {
+    position: relative;
+
+    margin-bottom: 11px;
+    padding-left: 28px;
+
+    line-height: 1.7;
+}
+
+
+/* Bullet */
+
+#cozy-bedroom-styling-essentials ul li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+    top: 0.72em;
+
+    width: 7px;
+    height: 7px;
+
+    background: var(--cozy-accent);
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   ORDERED LIST
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials ol {
+    list-style: none;
+
+    counter-reset: cozy-step;
+}
+
+#cozy-bedroom-styling-essentials ol li {
+    position: relative;
+
+    counter-increment: cozy-step;
+
+    min-height: 48px;
+
+    margin-bottom: 14px;
+    padding: 11px 15px 11px 62px;
+
+    background: #faf7f3;
+
+    border: 1px solid #eee5dd;
+    border-radius: 12px;
+
+    line-height: 1.65;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Number circle */
+
+#cozy-bedroom-styling-essentials ol li::before {
+    content: counter(cozy-step);
+
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    color: #ffffff;
+    background: var(--cozy-accent);
+
+    border-radius: 50%;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transform: translateY(-50%);
+}
+
+
+/* Ordered list hover */
+
+#cozy-bedroom-styling-essentials ol li:hover {
+    background: var(--cozy-surface-soft);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FINAL GUIDE SECTION
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials #cozy-bedroom-guide {
+    margin-top: 30px;
+
+    padding: 45px 42px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2e2824 0%,
+            #3a3029 100%
+        );
+
+    border: none;
+
+    box-shadow:
+        0 20px 55px rgba(42, 32, 25, 0.16);
+}
+
+
+/* Final guide heading */
+
+#cozy-bedroom-styling-essentials #cozy-bedroom-guide h2 {
+    color: #f8f3ed;
+}
+
+
+/* Final guide accent */
+
+#cozy-bedroom-styling-essentials #cozy-bedroom-guide h2::before {
+    background: #c8a98d;
+}
+
+
+/* Final guide paragraph */
+
+#cozy-bedroom-styling-essentials #cozy-bedroom-guide p {
+    color: #d9cec4;
+}
+
+
+/* Final guide strong */
+
+#cozy-bedroom-styling-essentials #cozy-bedroom-guide strong {
+    color: #f7eee6;
+}
+
+
+/* Final guide ordered list */
+
+#cozy-bedroom-styling-essentials #cozy-bedroom-guide ol li {
+    background: rgba(255, 255, 255, 0.055);
+
+    border-color: rgba(255, 255, 255, 0.09);
+
+    color: #d9cec4;
+}
+
+
+/* Final guide numbers */
+
+#cozy-bedroom-styling-essentials #cozy-bedroom-guide ol li::before {
+    color: #2e2824;
+    background: #d2b294;
+}
+
+
+/* Final guide hover */
+
+#cozy-bedroom-styling-essentials #cozy-bedroom-guide ol li:hover {
+    background: rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================================
+   LAST SECTION SPACING
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials section:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+   ========================================================= */
+
+#cozy-bedroom-styling-essentials ::selection {
+    background: var(--cozy-accent);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    #cozy-bedroom-styling-essentials {
+        width: min(100% - 28px, 920px);
+
+        margin: 45px auto;
+
+        font-size: 16px;
+    }
+
+    #cozy-bedroom-styling-essentials .cozy-bedroom-header {
+        margin-bottom: 32px;
+
+        padding: 40px 30px;
+
+        border-radius: 21px;
+    }
+
+    #cozy-bedroom-styling-essentials h1 {
+        font-size: 40px;
+    }
+
+    #cozy-bedroom-styling-essentials section {
+        padding: 30px 28px;
+
+        border-radius: 16px;
+    }
+
+    #cozy-bedroom-styling-essentials section h2 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    #cozy-bedroom-styling-essentials {
+        width: calc(100% - 22px);
+
+        margin: 30px auto;
+    }
+
+    #cozy-bedroom-styling-essentials .cozy-bedroom-header {
+        padding: 32px 23px;
+
+        border-radius: 17px;
+    }
+
+    #cozy-bedroom-styling-essentials h1 {
+        font-size: 34px;
+
+        letter-spacing: -0.8px;
+    }
+
+    #cozy-bedroom-styling-essentials .cozy-bedroom-header p {
+        font-size: 15.5px;
+
+        line-height: 1.75;
+    }
+
+    #cozy-bedroom-styling-essentials section {
+        margin-bottom: 17px;
+
+        padding: 27px 22px;
+
+        border-radius: 14px;
+    }
+
+    #cozy-bedroom-styling-essentials section h2 {
+        margin-bottom: 18px;
+
+        padding-left: 15px;
+
+        font-size: 24px;
+    }
+
+    #cozy-bedroom-styling-essentials section p {
+        font-size: 15.5px;
+
+        line-height: 1.8;
+    }
+
+    #cozy-bedroom-styling-essentials ul li {
+        padding-left: 25px;
+    }
+
+    #cozy-bedroom-styling-essentials ol li {
+        padding:
+            12px
+            12px
+            12px
+            57px;
+
+        font-size: 15px;
+    }
+
+    #cozy-bedroom-styling-essentials #cozy-bedroom-guide {
+        padding: 32px 22px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCE MOTION FOR ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #cozy-bedroom-styling-essentials section,
+    #cozy-bedroom-styling-essentials ol li {
+        transition: none;
+    }
+
+    #cozy-bedroom-styling-essentials section:hover,
+    #cozy-bedroom-styling-essentials ol li:hover {
+        transform: none;
+    }
+
+}
+
+
+
+
+       
+
+
+
+       /* footer is starting here """""AVEEM' Company""""""" */
+
+
+       
+
+
+
+#footer{
+    background-color: var(--bg);
+    height: 20rem;
+    color: white;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    color: #7c6cff;
+    font-size: 30px;
+}
+
+
+footer a{
+    color: white;
+}
+
+.foote-rlinks{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.footer-right{
+    max-width: 500px;
+}
+
+.extra{
+    padding-left: 0px;
+    color: #7c6cff;
+}
+
+.legal-links a{
+    color: white;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.privacy{
+    border-right: 2px solid gray;
+    padding: 0px 30px;
+}
+
+
+
+
+
+
+
+
+
+

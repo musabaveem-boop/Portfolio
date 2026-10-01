@@ -1,0 +1,481 @@
+/* =========================
+        RESET
+========================= */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-decoration:none;
+}
+
+
+
+:root{
+
+    --primary:#7c6cff;
+    --bg:#080812;
+    --card:#12121f;
+    --text:#ffffff;
+    --gray:#a1a1aa;
+
+}
+
+
+
+body{
+
+    background-color: var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* BACKGROUND EFFECT */
+
+
+body::before{
+
+    content:"";
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    background:var(--primary);
+
+    filter:blur(170px);
+
+    opacity:.18;
+
+    top:100px;
+    left:-150px;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+    position:fixed;
+
+    width:350px;
+    height:350px;
+
+    background:#a855f7;
+
+    filter:blur(170px);
+
+    opacity:.15;
+
+    right:-120px;
+    bottom:80px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* =========================
+        NAVBAR
+========================= */
+
+   header {
+
+           width: 100%;
+           height: 90px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(11,17,32,.92);
+            transition: .3s;
+
+       }
+
+
+       .logo {
+
+           font-size: 34px;
+           font-weight: 900;
+           color: #7c6cff;
+           cursor: pointer;
+           background-color: transparent;
+           transition: 0.5s;
+       }
+
+       .logo:hover {
+           transform: scale(100px);
+           transform: 2px;
+           box-shadow: 0px 0px 5px 0px;
+           background-color: transparent;
+       }
+
+       nav ul {
+
+           display: flex;
+           list-style: none;
+           gap: 35px;
+
+       }
+
+       nav ul li a {
+
+           text-decoration: none;
+           color: #b6b6c4;
+           font-size: 17px;
+           transition: .3s;
+           position: relative;
+
+       }
+
+       nav ul li a:hover {
+
+           color: #7c6cff;
+
+       }
+
+       nav ul li a::after {
+
+           content: "";
+           position: absolute;
+
+           left: 0;
+           bottom: -8px;
+
+           width: 0;
+           height: 2px;
+
+           background: #7c6cff;
+
+           transition: .3s;
+
+       }
+
+       nav ul li a:hover::after {
+
+           width: 100%;
+
+       }
+
+       .active {
+
+           color: #7c6cff;
+
+       }
+
+       .active::after {
+
+           width: 100%;
+
+       }
+
+       .hire-btn {
+
+           text-decoration: none;
+
+           background: #7c6cff;
+
+           color: white;
+
+           padding: 15px 35px;
+
+           border-radius: 12px;
+
+           transition: .3s;
+
+       }
+
+       .hire-btn:hover {
+
+           transform: translateY(-5px);
+
+           box-shadow: 0 0 20px #7c6cff;
+
+       }
+
+
+
+       /* blog content is starting here */
+
+       article{
+       
+        color: #080812;
+       }
+
+       h1{
+        display: flex;
+        justify-content: center;    ;
+       }
+
+        h2{
+        display: flex;
+        justify-content: center;    ;
+       }
+
+       .blogtitle{
+        padding: 70px 40px;
+        margin: 50px 20px;
+        background-image: url(blog1\ image.png);  
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: black;
+        border: 2px solid transparent;
+        border-radius: 50px;
+       box-shadow: 0 0 20px 0 #F3E8DA;
+       }
+
+
+       .firstimage{
+        width: 50%;
+       }
+
+       .blog-section{
+        
+        border: 2px solid transparent ;
+        box-shadow: 0 0 20px 0 #F3E8DA;
+        margin: 20px;
+        padding: 50px 40px;
+        background-color: #F3E8DA;
+        border-radius: 50px ;
+        
+       }
+
+       #blog-section-1{
+        
+        background-image: url(second-image-blog1.png);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+       }
+
+       .blog-content-size{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        
+       }
+
+       #blog-section-2{
+        background-image: url(blog\ image\ 2.png);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        }
+
+        #blog-content-size-id{
+            width: 35%;
+        }
+
+
+        /* image 3 is starting */
+
+       #blog-section-3{
+        background-image: url(blog1\ iamge\ 3.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: rgb(247, 247, 242);
+
+        padding-left: 70px;
+       }
+
+
+       /* image 4 is starting */
+
+       #blog-section-4{
+        background-image: url(blog1\ image\ 4.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: rgb(247, 247, 242);
+
+        padding-left: 70px;
+       }
+
+
+       /* image 5 is starting */
+
+
+       #blog-section-5{
+         background-image: url(blog1\ image\ 5.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: black;
+       }
+
+
+        /* image 6 is starting */
+
+
+       #blog-section-6{
+         background-image: url(blog1\ image\ 6.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: burlywood;
+       }
+
+
+        /* image 7 is starting */
+
+
+       #blog-section-7{
+         background-image: url(blog1\ image\ 7.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: black;
+       }
+
+
+
+        /* image 8 is starting */
+
+
+       #blog-section-8{
+         background-image: url(blog1\ image\ 8.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+       }
+
+
+       /* image 9 is starting */
+
+
+       #blog-section-9{
+         background-image: url(blog1\ image\ 9.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color:  rgb(244, 248, 179);
+       }
+
+
+        /* image 10 is starting */
+
+
+       #blog-section-10{
+         background-image: url(blog1\ image\ 10.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color:  #420505;
+       }
+
+
+        /* image 11 is starting */
+
+
+      #blog-section-11{
+         background-image: url(blog1\ iamge\ 11.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color:  white;
+       }
+       
+
+        /* image 12 is starting */
+
+      #blog-section-12{
+         background-image: url(blog1\ image\ 12.jfif);
+         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color:  white;
+       }
+       
+        .blog-conclusion{
+            color: white;
+            margin: 80px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+       }
+
+
+
+/* footer is Starting here */
+
+
+
+
+
+#footer{
+    background-color: var(--bg);
+    height: 20rem;
+    color: white;
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    color: #7c6cff;
+    font-size: 30px;
+}
+
+
+footer a{
+    color: white;
+}
+
+.foote-rlinks{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding-top: 80px;
+}
+
+.footer-right{
+    max-width: 500px;
+}
+
+.extra{
+    padding-left: 0px;
+    color: #7c6cff;
+}
+
+.legal-links a{
+    color: white;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.privacy{
+    border-right: 2px solid gray;
+    padding: 0px 30px;
+}
+
